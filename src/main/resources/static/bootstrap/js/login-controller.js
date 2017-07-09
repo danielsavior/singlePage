@@ -1,12 +1,15 @@
-angular.module('restaurante').controller('LoginController', function($scope,$http) {
-	$scope.foto = {
+/*global angular */
+/*global console */
+angular.module('restaurante').controller('LoginController', function ($scope, $http, $location) {
+	'use strict';
+    $scope.foto = {
         titulo : 'Logo',
         url : 'http://www.fundosanimais.com/Minis/leoes.jpg'
     };
 	//ao criar esse objeto no controller, quando eu usar ng-model="user.username"
 	//o campo username será criado aqui automáticamente.
 	$scope.user = {};
-	$scope.submeter = function() {
+	$scope.submeter = function () {
 //        if ($scope.formulario.$valid) {
 //            cadastroDeFotos.cadastrar($scope.foto)
 //            .then(function(dados) {
@@ -18,8 +21,16 @@ angular.module('restaurante').controller('LoginController', function($scope,$htt
 //            });
 //        }
 		
-		 $http.get('http://localhost:9005/teste')
-		//var mensagem = $scope.user.username		
+        /*$http({
+            method: 'GET',
+            url: 'teste'
+        }).then(function (msg) {
+            console.log(msg);
+        }, function (erro) {
+            console.log(erro);
+        });*/
+        $location.path('/outra-coisa');
+		//var mensagem = $scope.user.username
 		//alert('opa ' + mensagem)		
     };
 });
