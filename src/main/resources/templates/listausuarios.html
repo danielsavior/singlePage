@@ -18,8 +18,8 @@
 	        </thead>
 	        <tr th:each="usuario : ${usuarios}">
 	            <td> <span th:text="${usuario.id}"></span> </td>
-	            <td> <span th:text="${convidado.nomeDoUsuario}"></span> </td>
-	            <td> <span th:text="${convidado.tipo}"></span> </td>
+	            <td> <span th:text="${usuario.nomeDoUsuario}"></span> </td>
+	            <td> <span th:text="${usuario.tipo}"></span> </td>
 	        </tr>
 	    </table>
 	</div>
