@@ -1,6 +1,4 @@
-package br.com.restaurante.controllers;
-
-import javax.websocket.server.PathParam;
+package br.com.restaurante.rest.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,7 +14,7 @@ import br.com.restaurante.service.UsuarioService;
 import br.com.restaurante.utils.Utilidades;
 
 @Controller
-public class LoginController {
+public class LoginRestController {
 	
 	@Autowired
 	private UsuarioService service;

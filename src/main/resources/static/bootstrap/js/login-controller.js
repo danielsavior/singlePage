@@ -14,6 +14,7 @@ angular.module('restaurante').controller('LoginController', function ($scope, $h
 			$http.post('http://localhost:9005/efetuar-login',$scope.user)
 			.then(function(retorno) {
 				$location.path('/efetuar-login');
+				$scope.user = retorno.data;
 				console.log(retorno.data);
             })
             .catch(function(erro) {
