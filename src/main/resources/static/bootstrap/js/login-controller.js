@@ -13,8 +13,8 @@ angular.module('restaurante').controller('LoginController', function ($scope, $h
 		if ($scope.formlogin.$valid){
 			$http.post('http://localhost:9005/efetuar-login',$scope.user)
 			.then(function(retorno) {
-				$location.path('/efetuar-login');
 				$scope.user = retorno.data;
+				$location.path('/sucesso-login');
 				console.log(retorno.data);
             })
             .catch(function(erro) {
